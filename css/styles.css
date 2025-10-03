@@ -11,6 +11,7 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-left: 0;
 }
 h1,
 h2,
@@ -28,7 +29,7 @@ a {
 /* common */
 
 .container {
-  min-width: 1158px;
+  width: 1158px;
   padding: 0 15px;
   margin: auto;
 }
@@ -153,9 +154,24 @@ a {
 }
 
 /* Feature */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .feature-list {
   display: flex;
   gap: 24px;
+  padding-top: 125px;
+  padding-bottom: 107px;
 }
 
 .feature-item {
@@ -164,7 +180,13 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
+
+.feature-element {
+  width: calc((100% - 24px * 3) / 4);
+}
+
 .feature-text {
   font-weight: 400;
   font-size: 16px;
@@ -186,14 +208,31 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  padding-top: 120px;
+  margin-bottom: 72px;
 }
+
 .teams-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 120px;
 }
 .teams-item {
   background-color: #fff;
+  border-radius: 0 0 4px 4px;
 }
 .teams-img {
+  margin-bottom: 32px;
 }
+.teams-box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 232px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
 .teams-name,
 .portfolio-name {
   font-weight: 500;
@@ -201,6 +240,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .teams-text,
 .portfolio-text,
@@ -211,16 +251,41 @@ a {
   letter-spacing: 0.02em;
   color: #434455;
 }
+
 /*  Portfolio */
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  padding-bottom: 120px;
 }
-.portfolio-img {
+.portfolio-box {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding: 32px 16px;
 }
 
+.portfolio-img {
+}
+.portfolio-element {
+}
 /* Footer */
 .page-footer {
   background-color: #2e2f42;
 }
 .page-footer > .page-footer-text {
   color: #f4f4fd;
+}
+.page-footer-text {
+  width: 264px;
+}
+.footer-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
