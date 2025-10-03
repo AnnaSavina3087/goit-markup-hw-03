@@ -22,6 +22,9 @@ h6,
 p {
   margin: 0;
 }
+img {
+  display: block;
+}
 
 a {
   text-decoration: none;
@@ -121,16 +124,13 @@ a {
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  width: 496px;
+  max-width: 496px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 48px;
-  padding-top: 188px;
 }
 .hero-container {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 188px;
+  padding: 188px 0 188px;
 }
 
 .hero-button {
@@ -142,10 +142,12 @@ a {
   letter-spacing: 0.04em;
   color: #fff;
   cursor: pointer;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   margin-right: auto;
   margin-left: auto;
+  border: none;
+  border-radius: 4px;
 }
 
 .hero-button:hover,
@@ -170,8 +172,8 @@ a {
 .feature-list {
   display: flex;
   gap: 24px;
-  padding-top: 125px;
-  padding-bottom: 107px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .feature-item {
@@ -208,8 +210,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding-top: 120px;
-  margin-bottom: 72px;
+  padding: 120px 0 120px;
 }
 
 .teams-list {
@@ -230,7 +231,7 @@ a {
   margin-right: auto;
   width: 232px;
   text-align: center;
-  margin-bottom: 32px;
+  padding: 32px 0 32px;
 }
 
 .teams-name,
@@ -252,7 +253,7 @@ a {
   color: #434455;
 }
 
-/*  Portfolio */
+/* Portfolio */
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -267,10 +268,6 @@ a {
   padding: 32px 16px;
 }
 
-.portfolio-img {
-}
-.portfolio-element {
-}
 /* Footer */
 .page-footer {
   background-color: #2e2f42;
@@ -282,8 +279,7 @@ a {
   width: 264px;
 }
 .footer-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0 100px;
 }
 .footer-logo {
   display: inline-block;
